@@ -1,3 +1,9 @@
 <resources>
     <string name="app_name">WakeCap Assignment</string>
+    <string name="java_title">Workers list (Java)</string>
+    <string name="kotlin_title">Workers list grouped by role (Kotlin)</string>
+    <string name="welcome_caption">For more information about what\'s going on under the hood, please refer to read me
+        file in the main app folder.
+    </string>
+    <string name="welcome">Hello! This is Amin Keshavarzian\'s Assignment</string>
 </resources>
