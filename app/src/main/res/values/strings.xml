@@ -6,4 +6,5 @@
         file in the main app folder.
     </string>
     <string name="welcome">Hello! This is Amin Keshavarzian\'s Assignment</string>
+    <string name="ok">OK</string>
 </resources>
