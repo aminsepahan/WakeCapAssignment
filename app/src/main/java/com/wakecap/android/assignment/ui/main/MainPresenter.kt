@@ -11,11 +11,11 @@ class MainPresenter: MainContract.Presenter {
 
 
     override fun onJavaCardClicked() {
-        view.showWorkerListFragment()
+        view.showJavaListFragment()
     }
 
     override fun onKotlinCardClicked() {
-        view.showWorkersListGroupedByRole()
+        view.showKotlinFragment()
     }
 
     override fun subscribe() {

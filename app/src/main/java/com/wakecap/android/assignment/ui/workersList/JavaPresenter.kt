@@ -1,4 +1,4 @@
-package com.wakecap.android.assignment.ui.home
+package com.wakecap.android.assignment.ui.workersList
 
 import com.wakecap.android.assignment.R
 import com.wakecap.android.assignment.api.WebServices
@@ -10,11 +10,11 @@ import com.wakecap.android.assignment.utils.Constants.WORKERS_URL
 import io.reactivex.disposables.CompositeDisposable
 import io.reactivex.schedulers.Schedulers
 
-class HomePresenter : HomeContract.Presenter {
+class JavaPresenter : JavaContract.Presenter {
 
     private val subscriptions = CompositeDisposable()
     private val api: WebServices = WebServices.create()
-    private lateinit var view: HomeContract.View
+    private lateinit var view: JavaContract.View
 
     override fun subscribe() {
 
@@ -24,43 +24,37 @@ class HomePresenter : HomeContract.Presenter {
         subscriptions.clear()
     }
 
-    override fun attach(view: HomeContract.View) {
+    override fun attach(view: JavaContract.View) {
         this.view = view
         view.initViews()
     }
 
-    override fun onJavaCardClicked() {
-        downloadDataFromApi(0)
-    }
+    override fun downloadDataFromApi(){
 
-    override fun onKotlinCardClicked() {
-        downloadDataFromApi(1)
-    }
-
-    private fun downloadDataFromApi(position: Int){
-
+        //region checking if the device is online
         if (!view.isOnline()){
-            view.showLoading(position, false)
+            view.showLoading(false)
             view.dataError(view.getStringFromRes(R.string.you_are_offline))
             return
         }
+        //endregion
 
-        //region Retrofit and Rxjava logic which does not work with Wakecap API and gives 401
+        //region Retrofit and Rxjava logic
         val subscribe = api.getWorkersList().subscribeOn(Schedulers.io())
             .observeOn(Schedulers.io())
             .subscribe({ model: BaseResponseModel<WorkerAttributes>? ->
-                view.showLoading(position, false)
+                view.showLoading(false)
                 if (model != null && model.data.items.isNotEmpty()) {
-                    view.workersListDataReady(position, model.data.items)
+                    view.workersListDataReady(model.data.items)
                 }
             },{ error ->
-                view.showLoading(position, false)
+                view.showLoading(false)
                 view.dataError(error.localizedMessage)
             })
         subscriptions.add(subscribe)
         //endregion
 
-        //region Volley request
+        //region Volley request which is commented and is not being used
 
 //        WebServicesVolley().getRequest(BASE_URL + WORKERS_URL, object : WebServicesVolley.NetworkListeners {
 //            override fun onResponse(response: String) {

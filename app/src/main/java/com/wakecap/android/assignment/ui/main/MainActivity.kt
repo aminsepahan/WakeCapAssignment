@@ -6,10 +6,12 @@ import android.support.v7.app.AppCompatActivity
 import com.wakecap.android.assignment.R
 import com.wakecap.android.assignment.di.component.DaggerActivityComponent
 import com.wakecap.android.assignment.di.module.ActivityModule
+import com.wakecap.android.assignment.ui.base.BaseContract
 import com.wakecap.android.assignment.ui.home.HomeFragment
+import com.wakecap.android.assignment.ui.workersList.JavaFragment
 import javax.inject.Inject
 
-class MainActivity : AppCompatActivity(), MainContract.View {
+class MainActivity : AppCompatActivity(), MainContract.View, BaseContract.HomeFragmentOnCLickListener {
 
 
     @Inject
@@ -28,11 +30,11 @@ class MainActivity : AppCompatActivity(), MainContract.View {
         replaceFragment(HomeFragment.newInstance())
     }
 
-    override fun showWorkerListFragment() {
-
+    override fun showJavaListFragment() {
+        replaceFragment(JavaFragment.newInstance())
     }
 
-    override fun showWorkersListGroupedByRole() {
+    override fun showKotlinFragment() {
 
     }
 
@@ -47,6 +49,10 @@ class MainActivity : AppCompatActivity(), MainContract.View {
             .build()
 
         activityComponent.inject(this)
+    }
+
+    override fun onClicked(javaOrKotlin: Boolean) {
+
     }
 
     private fun replaceFragment(fragment: Fragment ) {

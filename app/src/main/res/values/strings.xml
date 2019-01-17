@@ -7,4 +7,8 @@
     </string>
     <string name="welcome">Hello! This is Amin Keshavarzian\'s Assignment</string>
     <string name="ok">OK</string>
+    <string name="you_are_offline">You are offline</string>
+    <string name="connection_error">Connection Error</string>
+
+
 </resources>

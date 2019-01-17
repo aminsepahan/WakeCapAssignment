@@ -1,30 +1,25 @@
-package com.wakecap.android.assignment.ui.home
+package com.wakecap.android.assignment.ui.workersList
 
 import android.support.annotation.StringRes
 import com.wakecap.android.assignment.models.BaseItem
 import com.wakecap.android.assignment.models.WorkerAttributes
 import com.wakecap.android.assignment.ui.base.BaseContract
 
-class HomeContract {
+class JavaContract {
 
     interface View: BaseContract.View {
 
-        fun isOnline(): Boolean
         fun initViews()
-        fun openJavaFragment()
-        fun openKotlinFragment()
-        fun showLoading(position: Int, showHide: Boolean)
+        fun isOnline(): Boolean
+        fun showLoading(showHide: Boolean)
         fun workersListDataReady(
-            position: Int,
             items: List<BaseItem<WorkerAttributes>>
         )
-
         fun dataError(error: String)
     }
 
-    interface Presenter : BaseContract.Presenter<HomeContract.View> {
-        fun onJavaCardClicked()
-        fun onKotlinCardClicked()
+    interface Presenter : BaseContract.Presenter<JavaContract.View> {
+        fun downloadDataFromApi()
     }
 
 }

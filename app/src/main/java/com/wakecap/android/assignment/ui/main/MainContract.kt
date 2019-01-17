@@ -7,8 +7,8 @@ class MainContract {
     interface View {
 
         fun showHomeFragment()
-        fun showWorkerListFragment()
-        fun showWorkersListGroupedByRole()
+        fun showJavaListFragment()
+        fun showKotlinFragment()
         fun onBackPressed()
     }
 
