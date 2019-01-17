@@ -26,14 +26,14 @@ class HomePresenter : HomeContract.Presenter {
     }
 
     override fun onJavaCardClicked() {
-
+        downloadDataFromApi(0)
     }
 
     override fun onKotlinCardClicked() {
-
+        downloadDataFromApi(1)
     }
 
-    fun downloadDataFromApi(position: Int){
+    private fun downloadDataFromApi(position: Int){
         val subscribe = api.getWorkersList().subscribeOn(Schedulers.io())
             .observeOn(Schedulers.io())
             .subscribe({ model: BaseResponseModel<WorkerAttributes>? ->

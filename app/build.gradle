@@ -67,6 +67,7 @@ dependencies {
     kapt "android.arch.persistence.room:compiler:$rootProject.roomVersion"
     implementation "com.google.guava:guava:$rootProject.guavaVersion"
     implementation "com.android.support.constraint:constraint-layout:$rootProject.constraintVersion"
+    implementation "com.google.firebase:firebase-crash:$firebaseVersion"
 
     // Dependencies for local unit tests
     testImplementation "junit:junit:$rootProject.ext.junitVersion"
@@ -108,11 +109,16 @@ dependencies {
     implementation "com.google.code.findbugs:jsr305:3.0.2"
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlinVersion"
 
-
+    // network with retrofit, gson and rxjava
     implementation "com.google.code.gson:gson:$gsonVersion"
-    implementation "com.google.firebase:firebase-crash:$firebaseVersion"
     implementation "com.squareup.retrofit2:retrofit:$retrofitVersion"
     implementation "com.squareup.retrofit2:adapter-rxjava2:$retrofitVersion"
     implementation "com.squareup.retrofit2:converter-gson:$retrofitVersion"
     implementation "com.squareup.okhttp3:logging-interceptor:$okhttpVersion"
+    implementation "com.squareup.okhttp3:okhttp-urlconnection:$okhttpVersion"
+
+    // Google volley for networking, because Retrofit didn't work with your server :(
+    implementation 'com.android.volley:volley:1.1.0'
+
+
 }
