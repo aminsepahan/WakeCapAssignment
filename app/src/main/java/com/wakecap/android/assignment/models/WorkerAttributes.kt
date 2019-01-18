@@ -16,5 +16,5 @@ data class WorkerAttributes(
     @SerializedName("created_at") val createdAt: String,
     @SerializedName("Inventories") val Inventories: List<BaseItem<InventoryAttributes>>,
     val Role: BaseItem<RoleAttributes>,
-    val role: String
+    @SerializedName("role")val roleName: String
 )

@@ -9,6 +9,9 @@
     <string name="ok">OK</string>
     <string name="you_are_offline">You are offline</string>
     <string name="connection_error">Connection Error</string>
+    <string name="name_with_colon">Name:</string>
+    <string name="role_with_colon">Role:</string>
+    <string name="inventory_with_colon">Inventrory:</string>
 
 
 </resources>

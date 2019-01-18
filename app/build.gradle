@@ -116,8 +116,11 @@ dependencies {
     implementation "com.squareup.okhttp3:logging-interceptor:$okhttpVersion"
     implementation "com.squareup.okhttp3:okhttp-urlconnection:$okhttpVersion"
 
-    // Google volley for networking, because Retrofit didn't work with your server :(
+    // Google volley for networking, as an alternative :(
     implementation 'com.android.volley:volley:1.1.0'
+
+    // for simplifying animations in our code
+    implementation 'com.github.florent37:viewanimator:1.1.0'
 
 
 }

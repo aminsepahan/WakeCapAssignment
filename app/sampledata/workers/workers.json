@@ -1,0 +1,1047 @@
+{
+  "message": "Workers Listed",
+  "data": {
+    "items": [
+      {
+        "type": "worker",
+        "id": 556,
+        "attributes": {
+          "helmet_color": "#fff",
+          "site_id": 10010001,
+          "role_id": 64,
+          "id": 556,
+          "first_name": "Md Abdul",
+          "last_name": "kashem",
+          "worker_tag_id": null,
+          "contractor": "CCC",
+          "mobile_number": null,
+          "created_at": "2018-10-04T10:55:32.000Z",
+          "updated_at": "2019-01-03T07:11:05.000Z",
+          "deleted_at": null,
+          "Inventories": [
+            {
+              "type": "inventory",
+              "id": 11000001,
+              "attributes": {
+                "site_id": 10010001,
+                "id": 11000001,
+                "name": "WC-CCC-1",
+                "type": "asset",
+                "maximum_voltage": 0,
+                "is_active": true,
+                "last_seen": "2019-01-17T08:24:07.000Z",
+                "created_at": "2018-08-30T15:22:15.000Z",
+                "updated_at": "2019-01-17T08:24:39.000Z",
+                "deleted_at": null,
+                "is_online": true
+              }
+            }
+          ],
+          "Role": {
+            "type": "workerrole",
+            "id": 64,
+            "attributes": {
+              "id": 64,
+              "name": "C/H Steel Fixer",
+              "created_at": "2018-10-04T10:46:48.000Z",
+              "updated_at": "2018-10-04T10:46:48.000Z",
+              "deleted_at": null
+            }
+          },
+          "role": "C/H Steel Fixer",
+          "full_name": "Md Abdul kashem"
+        }
+      },
+      {
+        "type": "worker",
+        "id": 563,
+        "attributes": {
+          "helmet_color": "#fff",
+          "site_id": 10010001,
+          "role_id": 43,
+          "id": 563,
+          "first_name": "George",
+          "last_name": "Kraitem",
+          "worker_tag_id": null,
+          "contractor": "CCC",
+          "mobile_number": null,
+          "created_at": "2018-10-04T11:04:13.000Z",
+          "updated_at": "2019-01-03T07:14:08.000Z",
+          "deleted_at": null,
+          "Inventories": [
+            {
+              "type": "inventory",
+              "id": 11000002,
+              "attributes": {
+                "site_id": 10010001,
+                "id": 11000002,
+                "name": "WC-CCC-2",
+                "type": "asset",
+                "maximum_voltage": 0,
+                "is_active": true,
+                "last_seen": "2019-01-17T08:25:52.000Z",
+                "created_at": "2018-08-30T15:22:15.000Z",
+                "updated_at": "2019-01-17T08:26:03.000Z",
+                "deleted_at": null,
+                "is_online": true
+              }
+            }
+          ],
+          "Role": {
+            "type": "workerrole",
+            "id": 43,
+            "attributes": {
+              "id": 43,
+              "name": "Engineer",
+              "created_at": "2018-09-16T14:18:31.000Z",
+              "updated_at": "2018-09-16T14:18:31.000Z",
+              "deleted_at": null
+            }
+          },
+          "role": "Engineer",
+          "full_name": "George Kraitem"
+        }
+      },
+      {
+        "type": "worker",
+        "id": 570,
+        "attributes": {
+          "helmet_color": "#fff",
+          "site_id": 10010001,
+          "role_id": 43,
+          "id": 570,
+          "first_name": "Hemal",
+          "last_name": "Chevli",
+          "worker_tag_id": null,
+          "contractor": "CCC",
+          "mobile_number": null,
+          "created_at": "2018-10-04T11:11:27.000Z",
+          "updated_at": "2019-01-03T07:14:56.000Z",
+          "deleted_at": null,
+          "Inventories": [
+            {
+              "type": "inventory",
+              "id": 11000003,
+              "attributes": {
+                "site_id": 10010001,
+                "id": 11000003,
+                "name": "WC-CCC-3",
+                "type": "asset",
+                "maximum_voltage": 0,
+                "is_active": true,
+                "last_seen": "2019-01-17T08:25:48.000Z",
+                "created_at": "2018-08-30T15:22:15.000Z",
+                "updated_at": "2019-01-17T08:26:03.000Z",
+                "deleted_at": null,
+                "is_online": true
+              }
+            }
+          ],
+          "Role": {
+            "type": "workerrole",
+            "id": 43,
+            "attributes": {
+              "id": 43,
+              "name": "Engineer",
+              "created_at": "2018-09-16T14:18:31.000Z",
+              "updated_at": "2018-09-16T14:18:31.000Z",
+              "deleted_at": null
+            }
+          },
+          "role": "Engineer",
+          "full_name": "Hemal Chevli"
+        }
+      },
+      {
+        "type": "worker",
+        "id": 577,
+        "attributes": {
+          "helmet_color": "#fff",
+          "site_id": 10010001,
+          "role_id": 43,
+          "id": 577,
+          "first_name": "Ahmad",
+          "last_name": "Taha",
+          "worker_tag_id": null,
+          "contractor": "CCC",
+          "mobile_number": null,
+          "created_at": "2018-10-04T11:16:03.000Z",
+          "updated_at": "2019-01-03T07:15:46.000Z",
+          "deleted_at": null,
+          "Inventories": [
+            {
+              "type": "inventory",
+              "id": 11000011,
+              "attributes": {
+                "site_id": 10010001,
+                "id": 11000011,
+                "name": "WC-CCC-11",
+                "type": "asset",
+                "maximum_voltage": 0,
+                "is_active": true,
+                "last_seen": "2019-01-17T08:25:41.000Z",
+                "created_at": "2018-08-30T15:22:15.000Z",
+                "updated_at": "2019-01-17T08:25:51.000Z",
+                "deleted_at": null,
+                "is_online": true
+              }
+            }
+          ],
+          "Role": {
+            "type": "workerrole",
+            "id": 43,
+            "attributes": {
+              "id": 43,
+              "name": "Engineer",
+              "created_at": "2018-09-16T14:18:31.000Z",
+              "updated_at": "2018-09-16T14:18:31.000Z",
+              "deleted_at": null
+            }
+          },
+          "role": "Engineer",
+          "full_name": "Ahmad Taha"
+        }
+      },
+      {
+        "type": "worker",
+        "id": 584,
+        "attributes": {
+          "helmet_color": "#fff",
+          "site_id": 10010001,
+          "role_id": 155,
+          "id": 584,
+          "first_name": "Sohie",
+          "last_name": "Pramanik",
+          "worker_tag_id": null,
+          "contractor": "CCC",
+          "mobile_number": null,
+          "created_at": "2018-10-04T11:18:04.000Z",
+          "updated_at": "2019-01-03T07:58:09.000Z",
+          "deleted_at": null,
+          "Inventories": [
+            {
+              "type": "inventory",
+              "id": 11000020,
+              "attributes": {
+                "site_id": 10010001,
+                "id": 11000020,
+                "name": "WC-CCC-20",
+                "type": "asset",
+                "maximum_voltage": 0,
+                "is_active": true,
+                "last_seen": "2019-01-17T08:23:31.000Z",
+                "created_at": "2018-08-30T15:22:15.000Z",
+                "updated_at": "2019-01-17T08:24:15.000Z",
+                "deleted_at": null,
+                "is_online": true
+              }
+            }
+          ],
+          "Role": {
+            "type": "workerrole",
+            "id": 155,
+            "attributes": {
+              "id": 155,
+              "name": "Steel Fixer",
+              "created_at": "2018-10-04T10:46:48.000Z",
+              "updated_at": "2018-10-04T10:46:48.000Z",
+              "deleted_at": null
+            }
+          },
+          "role": "Steel Fixer",
+          "full_name": "Sohie Pramanik"
+        }
+      },
+      {
+        "type": "worker",
+        "id": 591,
+        "attributes": {
+          "helmet_color": "#fff",
+          "site_id": 10010001,
+          "role_id": 155,
+          "id": 591,
+          "first_name": "Balkar",
+          "last_name": "Singh",
+          "worker_tag_id": null,
+          "contractor": "CCC",
+          "mobile_number": null,
+          "created_at": "2018-10-04T11:33:35.000Z",
+          "updated_at": "2019-01-03T07:16:57.000Z",
+          "deleted_at": null,
+          "Inventories": [
+            {
+              "type": "inventory",
+              "id": 11000004,
+              "attributes": {
+                "site_id": 10010001,
+                "id": 11000004,
+                "name": "WC-CCC-4",
+                "type": "asset",
+                "maximum_voltage": 0,
+                "is_active": true,
+                "last_seen": "2019-01-17T02:11:08.000Z",
+                "created_at": "2018-08-30T15:22:15.000Z",
+                "updated_at": "2019-01-17T02:12:21.000Z",
+                "deleted_at": null,
+                "is_online": false
+              }
+            }
+          ],
+          "Role": {
+            "type": "workerrole",
+            "id": 155,
+            "attributes": {
+              "id": 155,
+              "name": "Steel Fixer",
+              "created_at": "2018-10-04T10:46:48.000Z",
+              "updated_at": "2018-10-04T10:46:48.000Z",
+              "deleted_at": null
+            }
+          },
+          "role": "Steel Fixer",
+          "full_name": "Balkar Singh"
+        }
+      },
+      {
+        "type": "worker",
+        "id": 598,
+        "attributes": {
+          "helmet_color": "#fff",
+          "site_id": 10010001,
+          "role_id": 155,
+          "id": 598,
+          "first_name": "Nur Nabi",
+          "last_name": "Mofijuddin",
+          "worker_tag_id": null,
+          "contractor": "CCC",
+          "mobile_number": null,
+          "created_at": "2018-10-04T11:36:15.000Z",
+          "updated_at": "2019-01-03T07:17:57.000Z",
+          "deleted_at": null,
+          "Inventories": [
+            {
+              "type": "inventory",
+              "id": 11000005,
+              "attributes": {
+                "site_id": 10010001,
+                "id": 11000005,
+                "name": "WC-CCC-5",
+                "type": "asset",
+                "maximum_voltage": 0,
+                "is_active": true,
+                "last_seen": "2019-01-17T08:24:53.000Z",
+                "created_at": "2018-08-30T15:22:15.000Z",
+                "updated_at": "2019-01-17T08:25:11.000Z",
+                "deleted_at": null,
+                "is_online": true
+              }
+            }
+          ],
+          "Role": {
+            "type": "workerrole",
+            "id": 155,
+            "attributes": {
+              "id": 155,
+              "name": "Steel Fixer",
+              "created_at": "2018-10-04T10:46:48.000Z",
+              "updated_at": "2018-10-04T10:46:48.000Z",
+              "deleted_at": null
+            }
+          },
+          "role": "Steel Fixer",
+          "full_name": "Nur Nabi Mofijuddin"
+        }
+      },
+      {
+        "type": "worker",
+        "id": 605,
+        "attributes": {
+          "helmet_color": "#fff",
+          "site_id": 10010001,
+          "role_id": 155,
+          "id": 605,
+          "first_name": "Rajendern",
+          "last_name": "Narayn",
+          "worker_tag_id": null,
+          "contractor": "CCC",
+          "mobile_number": null,
+          "created_at": "2018-10-04T11:37:09.000Z",
+          "updated_at": "2019-01-03T07:18:43.000Z",
+          "deleted_at": null,
+          "Inventories": [
+            {
+              "type": "inventory",
+              "id": 11000006,
+              "attributes": {
+                "site_id": 10010001,
+                "id": 11000006,
+                "name": "WC-CCC-6",
+                "type": "asset",
+                "maximum_voltage": 0,
+                "is_active": true,
+                "last_seen": "2019-01-17T08:23:35.000Z",
+                "created_at": "2018-08-30T15:22:15.000Z",
+                "updated_at": "2019-01-17T08:24:03.000Z",
+                "deleted_at": null,
+                "is_online": true
+              }
+            }
+          ],
+          "Role": {
+            "type": "workerrole",
+            "id": 155,
+            "attributes": {
+              "id": 155,
+              "name": "Steel Fixer",
+              "created_at": "2018-10-04T10:46:48.000Z",
+              "updated_at": "2018-10-04T10:46:48.000Z",
+              "deleted_at": null
+            }
+          },
+          "role": "Steel Fixer",
+          "full_name": "Rajendern Narayn"
+        }
+      },
+      {
+        "type": "worker",
+        "id": 612,
+        "attributes": {
+          "helmet_color": "#fff",
+          "site_id": 10010001,
+          "role_id": 99,
+          "id": 612,
+          "first_name": "Afjal",
+          "last_name": "Ali",
+          "worker_tag_id": null,
+          "contractor": "CCC",
+          "mobile_number": null,
+          "created_at": "2018-10-04T11:37:51.000Z",
+          "updated_at": "2019-01-03T07:19:34.000Z",
+          "deleted_at": null,
+          "Inventories": [
+            {
+              "type": "inventory",
+              "id": 11000007,
+              "attributes": {
+                "site_id": 10010001,
+                "id": 11000007,
+                "name": "WC-CCC-7",
+                "type": "asset",
+                "maximum_voltage": 0,
+                "is_active": true,
+                "last_seen": "2019-01-17T08:25:48.000Z",
+                "created_at": "2018-08-30T15:22:15.000Z",
+                "updated_at": "2019-01-17T08:26:32.000Z",
+                "deleted_at": null,
+                "is_online": true
+              }
+            }
+          ],
+          "Role": {
+            "type": "workerrole",
+            "id": 99,
+            "attributes": {
+              "id": 99,
+              "name": "Labour",
+              "created_at": "2018-10-04T10:46:48.000Z",
+              "updated_at": "2018-10-04T10:46:48.000Z",
+              "deleted_at": null
+            }
+          },
+          "role": "Labour",
+          "full_name": "Afjal Ali"
+        }
+      },
+      {
+        "type": "worker",
+        "id": 619,
+        "attributes": {
+          "helmet_color": "#fff",
+          "site_id": 10010001,
+          "role_id": 155,
+          "id": 619,
+          "first_name": "Rubel",
+          "last_name": "N/A",
+          "worker_tag_id": null,
+          "contractor": "CCC",
+          "mobile_number": null,
+          "created_at": "2018-10-04T11:38:27.000Z",
+          "updated_at": "2019-01-03T07:20:20.000Z",
+          "deleted_at": null,
+          "Inventories": [
+            {
+              "type": "inventory",
+              "id": 11000008,
+              "attributes": {
+                "site_id": 10010001,
+                "id": 11000008,
+                "name": "WC-CCC-8",
+                "type": "asset",
+                "maximum_voltage": 0,
+                "is_active": true,
+                "last_seen": "2019-01-17T08:09:08.000Z",
+                "created_at": "2018-08-30T15:22:15.000Z",
+                "updated_at": "2019-01-17T08:09:52.000Z",
+                "deleted_at": null,
+                "is_online": false
+              }
+            }
+          ],
+          "Role": {
+            "type": "workerrole",
+            "id": 155,
+            "attributes": {
+              "id": 155,
+              "name": "Steel Fixer",
+              "created_at": "2018-10-04T10:46:48.000Z",
+              "updated_at": "2018-10-04T10:46:48.000Z",
+              "deleted_at": null
+            }
+          },
+          "role": "Steel Fixer",
+          "full_name": "Rubel N/A"
+        }
+      },
+      {
+        "type": "worker",
+        "id": 626,
+        "attributes": {
+          "helmet_color": "#fff",
+          "site_id": 10010001,
+          "role_id": 155,
+          "id": 626,
+          "first_name": "Dulu",
+          "last_name": "Miah",
+          "worker_tag_id": null,
+          "contractor": "CCC",
+          "mobile_number": null,
+          "created_at": "2018-10-04T11:38:59.000Z",
+          "updated_at": "2019-01-03T07:23:41.000Z",
+          "deleted_at": null,
+          "Inventories": [
+            {
+              "type": "inventory",
+              "id": 11000009,
+              "attributes": {
+                "site_id": 10010001,
+                "id": 11000009,
+                "name": "WC-CCC-9",
+                "type": "asset",
+                "maximum_voltage": 0,
+                "is_active": true,
+                "last_seen": "2019-01-17T08:25:37.000Z",
+                "created_at": "2018-08-30T15:22:15.000Z",
+                "updated_at": "2019-01-17T08:26:40.000Z",
+                "deleted_at": null,
+                "is_online": true
+              }
+            }
+          ],
+          "Role": {
+            "type": "workerrole",
+            "id": 155,
+            "attributes": {
+              "id": 155,
+              "name": "Steel Fixer",
+              "created_at": "2018-10-04T10:46:48.000Z",
+              "updated_at": "2018-10-04T10:46:48.000Z",
+              "deleted_at": null
+            }
+          },
+          "role": "Steel Fixer",
+          "full_name": "Dulu Miah"
+        }
+      },
+      {
+        "type": "worker",
+        "id": 633,
+        "attributes": {
+          "helmet_color": "#fff",
+          "site_id": 10010001,
+          "role_id": 155,
+          "id": 633,
+          "first_name": "Monir dulal",
+          "last_name": "Miah",
+          "worker_tag_id": null,
+          "contractor": "CCC",
+          "mobile_number": null,
+          "created_at": "2018-10-04T11:39:33.000Z",
+          "updated_at": "2019-01-03T07:25:57.000Z",
+          "deleted_at": null,
+          "Inventories": [
+            {
+              "type": "inventory",
+              "id": 11000010,
+              "attributes": {
+                "site_id": 10010001,
+                "id": 11000010,
+                "name": "WC-CCC-10",
+                "type": "asset",
+                "maximum_voltage": 0,
+                "is_active": true,
+                "last_seen": "2019-01-17T08:25:41.000Z",
+                "created_at": "2018-08-30T15:22:15.000Z",
+                "updated_at": "2019-01-17T08:26:40.000Z",
+                "deleted_at": null,
+                "is_online": true
+              }
+            }
+          ],
+          "Role": {
+            "type": "workerrole",
+            "id": 155,
+            "attributes": {
+              "id": 155,
+              "name": "Steel Fixer",
+              "created_at": "2018-10-04T10:46:48.000Z",
+              "updated_at": "2018-10-04T10:46:48.000Z",
+              "deleted_at": null
+            }
+          },
+          "role": "Steel Fixer",
+          "full_name": "Monir dulal Miah"
+        }
+      },
+      {
+        "type": "worker",
+        "id": 640,
+        "attributes": {
+          "helmet_color": "#fff",
+          "site_id": 10010001,
+          "role_id": 169,
+          "id": 640,
+          "first_name": "Amir",
+          "last_name": "Nawaz",
+          "worker_tag_id": null,
+          "contractor": "CCC",
+          "mobile_number": null,
+          "created_at": "2018-10-04T11:40:36.000Z",
+          "updated_at": "2019-01-03T07:26:50.000Z",
+          "deleted_at": null,
+          "Inventories": [
+            {
+              "type": "inventory",
+              "id": 11000012,
+              "attributes": {
+                "site_id": 10010001,
+                "id": 11000012,
+                "name": "WC-CCC-12",
+                "type": "asset",
+                "maximum_voltage": 0,
+                "is_active": true,
+                "last_seen": "2019-01-17T08:25:47.000Z",
+                "created_at": "2018-08-30T15:22:15.000Z",
+                "updated_at": "2019-01-17T08:26:22.000Z",
+                "deleted_at": null,
+                "is_online": true
+              }
+            }
+          ],
+          "Role": {
+            "type": "workerrole",
+            "id": 169,
+            "attributes": {
+              "id": 169,
+              "name": "Time Keeper",
+              "created_at": "2018-10-04T10:46:48.000Z",
+              "updated_at": "2018-10-04T10:46:48.000Z",
+              "deleted_at": null
+            }
+          },
+          "role": "Time Keeper",
+          "full_name": "Amir Nawaz"
+        }
+      },
+      {
+        "type": "worker",
+        "id": 766,
+        "attributes": {
+          "helmet_color": "#fff",
+          "site_id": 10010001,
+          "role_id": 99,
+          "id": 766,
+          "first_name": "Suk winder",
+          "last_name": "Singh",
+          "worker_tag_id": null,
+          "contractor": "CCC",
+          "mobile_number": null,
+          "created_at": "2018-10-04T13:36:39.000Z",
+          "updated_at": "2019-01-03T07:28:03.000Z",
+          "deleted_at": null,
+          "Inventories": [
+            {
+              "type": "inventory",
+              "id": 11000013,
+              "attributes": {
+                "site_id": 10010001,
+                "id": 11000013,
+                "name": "WC-CCC-13",
+                "type": "asset",
+                "maximum_voltage": 0,
+                "is_active": true,
+                "last_seen": "2019-01-17T08:25:34.000Z",
+                "created_at": "2018-08-30T15:22:15.000Z",
+                "updated_at": "2019-01-17T08:26:02.000Z",
+                "deleted_at": null,
+                "is_online": true
+              }
+            }
+          ],
+          "Role": {
+            "type": "workerrole",
+            "id": 99,
+            "attributes": {
+              "id": 99,
+              "name": "Labour",
+              "created_at": "2018-10-04T10:46:48.000Z",
+              "updated_at": "2018-10-04T10:46:48.000Z",
+              "deleted_at": null
+            }
+          },
+          "role": "Labour",
+          "full_name": "Suk winder Singh"
+        }
+      },
+      {
+        "type": "worker",
+        "id": 780,
+        "attributes": {
+          "helmet_color": "#fff",
+          "site_id": 10010001,
+          "role_id": 155,
+          "id": 780,
+          "first_name": "Shariful",
+          "last_name": "Islam",
+          "worker_tag_id": null,
+          "contractor": "CCC",
+          "mobile_number": null,
+          "created_at": "2018-10-04T13:37:20.000Z",
+          "updated_at": "2019-01-03T07:29:06.000Z",
+          "deleted_at": null,
+          "Inventories": [
+            {
+              "type": "inventory",
+              "id": 11000014,
+              "attributes": {
+                "site_id": 10010001,
+                "id": 11000014,
+                "name": "WC-CCC-14",
+                "type": "asset",
+                "maximum_voltage": 0,
+                "is_active": true,
+                "last_seen": "2019-01-17T08:25:37.000Z",
+                "created_at": "2018-08-30T15:22:15.000Z",
+                "updated_at": "2019-01-17T08:26:40.000Z",
+                "deleted_at": null,
+                "is_online": true
+              }
+            }
+          ],
+          "Role": {
+            "type": "workerrole",
+            "id": 155,
+            "attributes": {
+              "id": 155,
+              "name": "Steel Fixer",
+              "created_at": "2018-10-04T10:46:48.000Z",
+              "updated_at": "2018-10-04T10:46:48.000Z",
+              "deleted_at": null
+            }
+          },
+          "role": "Steel Fixer",
+          "full_name": "Shariful Islam"
+        }
+      },
+      {
+        "type": "worker",
+        "id": 794,
+        "attributes": {
+          "helmet_color": "#fff",
+          "site_id": 10010001,
+          "role_id": 92,
+          "id": 794,
+          "first_name": "Mahmood",
+          "last_name": "Walid",
+          "worker_tag_id": null,
+          "contractor": "CCC",
+          "mobile_number": null,
+          "created_at": "2018-10-04T13:37:52.000Z",
+          "updated_at": "2019-01-03T07:30:00.000Z",
+          "deleted_at": null,
+          "Inventories": [
+            {
+              "type": "inventory",
+              "id": 11000015,
+              "attributes": {
+                "site_id": 10010001,
+                "id": 11000015,
+                "name": "WC-CCC-15",
+                "type": "asset",
+                "maximum_voltage": 0,
+                "is_active": true,
+                "last_seen": "2019-01-17T08:23:32.000Z",
+                "created_at": "2018-08-30T15:22:15.000Z",
+                "updated_at": "2019-01-17T08:23:39.000Z",
+                "deleted_at": null,
+                "is_online": true
+              }
+            }
+          ],
+          "Role": {
+            "type": "workerrole",
+            "id": 92,
+            "attributes": {
+              "id": 92,
+              "name": "Jr. Engineer",
+              "created_at": "2018-10-04T10:46:48.000Z",
+              "updated_at": "2018-10-04T10:46:48.000Z",
+              "deleted_at": null
+            }
+          },
+          "role": "Jr. Engineer",
+          "full_name": "Mahmood Walid"
+        }
+      },
+      {
+        "type": "worker",
+        "id": 808,
+        "attributes": {
+          "helmet_color": "#fff",
+          "site_id": 10010001,
+          "role_id": 155,
+          "id": 808,
+          "first_name": "Alauddin",
+          "last_name": "Hadish",
+          "worker_tag_id": null,
+          "contractor": "CCC",
+          "mobile_number": null,
+          "created_at": "2018-10-04T13:38:18.000Z",
+          "updated_at": "2019-01-03T07:33:48.000Z",
+          "deleted_at": null,
+          "Inventories": [
+            {
+              "type": "inventory",
+              "id": 11000016,
+              "attributes": {
+                "site_id": 10010001,
+                "id": 11000016,
+                "name": "WC-CCC-16",
+                "type": "asset",
+                "maximum_voltage": 0,
+                "is_active": true,
+                "last_seen": "2019-01-17T08:23:55.000Z",
+                "created_at": "2018-08-30T15:22:15.000Z",
+                "updated_at": "2019-01-17T08:24:22.000Z",
+                "deleted_at": null,
+                "is_online": true
+              }
+            }
+          ],
+          "Role": {
+            "type": "workerrole",
+            "id": 155,
+            "attributes": {
+              "id": 155,
+              "name": "Steel Fixer",
+              "created_at": "2018-10-04T10:46:48.000Z",
+              "updated_at": "2018-10-04T10:46:48.000Z",
+              "deleted_at": null
+            }
+          },
+          "role": "Steel Fixer",
+          "full_name": "Alauddin Hadish"
+        }
+      },
+      {
+        "type": "worker",
+        "id": 815,
+        "attributes": {
+          "helmet_color": "#fff",
+          "site_id": 10010001,
+          "role_id": 155,
+          "id": 815,
+          "first_name": "Zakir",
+          "last_name": "Husain",
+          "worker_tag_id": null,
+          "contractor": "CCC",
+          "mobile_number": null,
+          "created_at": "2018-10-04T13:38:37.000Z",
+          "updated_at": "2019-01-03T07:34:35.000Z",
+          "deleted_at": null,
+          "Inventories": [
+            {
+              "type": "inventory",
+              "id": 11000017,
+              "attributes": {
+                "site_id": 10010001,
+                "id": 11000017,
+                "name": "WC-CCC-17",
+                "type": "asset",
+                "maximum_voltage": 0,
+                "is_active": true,
+                "last_seen": "2019-01-17T08:23:40.000Z",
+                "created_at": "2018-08-30T15:22:15.000Z",
+                "updated_at": "2019-01-17T08:24:06.000Z",
+                "deleted_at": null,
+                "is_online": true
+              }
+            }
+          ],
+          "Role": {
+            "type": "workerrole",
+            "id": 155,
+            "attributes": {
+              "id": 155,
+              "name": "Steel Fixer",
+              "created_at": "2018-10-04T10:46:48.000Z",
+              "updated_at": "2018-10-04T10:46:48.000Z",
+              "deleted_at": null
+            }
+          },
+          "role": "Steel Fixer",
+          "full_name": "Zakir Husain"
+        }
+      },
+      {
+        "type": "worker",
+        "id": 822,
+        "attributes": {
+          "helmet_color": "#fff",
+          "site_id": 10010001,
+          "role_id": 134,
+          "id": 822,
+          "first_name": "Site",
+          "last_name": "doctor",
+          "worker_tag_id": null,
+          "contractor": "CCC",
+          "mobile_number": null,
+          "created_at": "2018-10-04T13:39:00.000Z",
+          "updated_at": "2019-01-03T07:49:04.000Z",
+          "deleted_at": null,
+          "Inventories": [
+            {
+              "type": "inventory",
+              "id": 11000018,
+              "attributes": {
+                "site_id": 10010001,
+                "id": 11000018,
+                "name": "WC-CCC-18",
+                "type": "asset",
+                "maximum_voltage": 0,
+                "is_active": true,
+                "last_seen": "2019-01-17T08:25:43.000Z",
+                "created_at": "2018-08-30T15:22:15.000Z",
+                "updated_at": "2019-01-17T08:25:52.000Z",
+                "deleted_at": null,
+                "is_online": true
+              }
+            }
+          ],
+          "Role": {
+            "type": "workerrole",
+            "id": 134,
+            "attributes": {
+              "id": 134,
+              "name": "Project Engineer",
+              "created_at": "2018-10-04T10:46:48.000Z",
+              "updated_at": "2018-10-04T10:46:48.000Z",
+              "deleted_at": null
+            }
+          },
+          "role": "Project Engineer",
+          "full_name": "Site doctor"
+        }
+      },
+      {
+        "type": "worker",
+        "id": 836,
+        "attributes": {
+          "helmet_color": "#fff",
+          "site_id": 10010001,
+          "role_id": 155,
+          "id": 836,
+          "first_name": "Sobuz",
+          "last_name": "Abdul",
+          "worker_tag_id": null,
+          "contractor": "CCC",
+          "mobile_number": null,
+          "created_at": "2018-10-04T13:39:23.000Z",
+          "updated_at": "2019-01-03T07:49:41.000Z",
+          "deleted_at": null,
+          "Inventories": [
+            {
+              "type": "inventory",
+              "id": 11000019,
+              "attributes": {
+                "site_id": 10010001,
+                "id": 11000019,
+                "name": "WC-CCC-19",
+                "type": "asset",
+                "maximum_voltage": 0,
+                "is_active": true,
+                "last_seen": "2019-01-17T08:24:16.000Z",
+                "created_at": "2018-08-30T15:22:15.000Z",
+                "updated_at": "2019-01-17T08:24:47.000Z",
+                "deleted_at": null,
+                "is_online": true
+              }
+            }
+          ],
+          "Role": {
+            "type": "workerrole",
+            "id": 155,
+            "attributes": {
+              "id": 155,
+              "name": "Steel Fixer",
+              "created_at": "2018-10-04T10:46:48.000Z",
+              "updated_at": "2018-10-04T10:46:48.000Z",
+              "deleted_at": null
+            }
+          },
+          "role": "Steel Fixer",
+          "full_name": "Sobuz Abdul"
+        }
+      },
+      {
+        "type": "worker",
+        "id": 849,
+        "attributes": {
+          "helmet_color": "#fff",
+          "site_id": 10010001,
+          "role_id": 64,
+          "id": 849,
+          "first_name": "hey",
+          "last_name": "",
+          "worker_tag_id": null,
+          "contractor": null,
+          "mobile_number": null,
+          "created_at": "2019-01-08T07:35:44.000Z",
+          "updated_at": "2019-01-08T07:35:44.000Z",
+          "deleted_at": null,
+          "Inventories": [],
+          "Role": {
+            "type": "workerrole",
+            "id": 64,
+            "attributes": {
+              "id": 64,
+              "name": "C/H Steel Fixer",
+              "created_at": "2018-10-04T10:46:48.000Z",
+              "updated_at": "2018-10-04T10:46:48.000Z",
+              "deleted_at": null
+            }
+          },
+          "role": "C/H Steel Fixer",
+          "full_name": "hey "
+        }
+      }
+    ],
+    "meta": {
+      "total": 21,
+      "per_page": 30,
+      "current_page": 1,
+      "last_page": 1,
+      "next": null,
+      "previous": null
+    }
+  }
+}

@@ -2,8 +2,16 @@
              xmlns:tools="http://schemas.android.com/tools"
              android:layout_width="match_parent"
              android:layout_height="match_parent"
+             android:padding="@dimen/activity_default_padding"
              tools:context="com.wakecap.android.assignment.ui.workersList.JavaFragment">
 
-    <!-- TODO: Update blank fragment layout -->
+    <android.support.v7.widget.RecyclerView
+            android:id="@+id/rv"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:clipToPadding="false"
+            tools:listitem="@layout/item_worker"
+
+    />
 
 </FrameLayout>
