@@ -17,6 +17,7 @@ import kotlinx.android.synthetic.main.fragment_list.*
 
 class KotlinFragment : Fragment(), KotlinContract.View {
 
+    @Suppress("DEPRECATION")
     override fun isOnline(): Boolean {
         val cm =
             activity?.getSystemService(Context.CONNECTIVITY_SERVICE) as ConnectivityManager
@@ -41,16 +42,11 @@ class KotlinFragment : Fragment(), KotlinContract.View {
     private lateinit var rootView: View
 
 
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-    }
-
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
         rootView = inflater.inflate(R.layout.fragment_list, container, false)
-        rv.layoutManager = LinearLayoutManager(activity)
         return rootView
     }
 
@@ -64,10 +60,11 @@ class KotlinFragment : Fragment(), KotlinContract.View {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
+        rv.layoutManager = LinearLayoutManager(activity)
         presenter = KotlinPresenter()
         presenter.attach(this)
-        presenter.attach(this)
         presenter.subscribe()
+        presenter.downloadDataFromApi()
     }
 
 

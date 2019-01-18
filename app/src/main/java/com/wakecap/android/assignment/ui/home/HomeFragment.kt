@@ -49,7 +49,7 @@ class HomeFragment : Fragment(), HomeContract.View {
             .fragmentModule(FragmentModule())
             .build()
 
-        homeComponent.injectHome(this)
+        homeComponent.inject(this)
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {

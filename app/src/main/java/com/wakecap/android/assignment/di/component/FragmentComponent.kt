@@ -11,7 +11,6 @@ import dagger.Component
 @Component(modules = arrayOf(FragmentModule::class))
 interface FragmentComponent {
 
-    fun injectHome(homeFragment: HomeFragment)
-    fun injectKotlinFragment(homeFragment: KotlinFragment)
+    fun inject(homeFragment: HomeFragment)
 
 }
