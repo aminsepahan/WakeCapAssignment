@@ -1,7 +1,5 @@
 package com.wakecap.android.assignment.ui.home
 
-import android.content.Context
-import android.net.ConnectivityManager
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -25,9 +23,6 @@ class HomeFragment : Fragment(), HomeContract.View {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        arguments?.let {
-            // just for demo, if we had arguments
-        }
         injectDependency()
     }
 
@@ -54,7 +49,7 @@ class HomeFragment : Fragment(), HomeContract.View {
             .fragmentModule(FragmentModule())
             .build()
 
-        homeComponent.inject(this)
+        homeComponent.injectHome(this)
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
@@ -69,7 +64,7 @@ class HomeFragment : Fragment(), HomeContract.View {
     }
 
     override fun openKotlinFragment() {
-
+        findNavController().navigate(R.id.kotlinFragment)
     }
 
 

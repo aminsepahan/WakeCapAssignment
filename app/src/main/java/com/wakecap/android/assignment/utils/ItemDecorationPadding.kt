@@ -7,7 +7,7 @@ import androidx.recyclerview.widget.RecyclerView
 /**
  * Created by Amin on 15/12/2017.
  */
-class ItemDecorationPadding(val paddingTop: Int, val column: Int) : RecyclerView.ItemDecoration() {
+class ItemDecorationPadding(private val paddingTop: Int, private val column: Int) : RecyclerView.ItemDecoration() {
 
     constructor(paddingTop: Int) : this(paddingTop, 1)
 
@@ -31,12 +31,9 @@ class ItemDecorationPadding(val paddingTop: Int, val column: Int) : RecyclerView
                 view.paddingRight,
                 view.paddingBottom
             )
-        } else if (itemCount > 0 && itemPosition == itemCount - 1) {
-            outRect.set(view.paddingLeft, view.paddingTop, view.paddingRight, dpToPixels(50f))
         } else {
             outRect.set(view.paddingLeft, view.paddingTop, view.paddingRight, view.paddingBottom)
-        }// every other item
-        // last item
+        }
     }
 
 

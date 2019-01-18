@@ -1,6 +1,7 @@
 package com.wakecap.android.assignment.di.component
 
 import com.wakecap.android.assignment.di.module.FragmentModule
+import com.wakecap.android.assignment.ui.kotlinList.KotlinFragment
 import com.wakecap.android.assignment.ui.home.HomeFragment
 import dagger.Component
 
@@ -10,6 +11,7 @@ import dagger.Component
 @Component(modules = arrayOf(FragmentModule::class))
 interface FragmentComponent {
 
-    fun inject(homeFragment: HomeFragment)
+    fun injectHome(homeFragment: HomeFragment)
+    fun injectKotlinFragment(homeFragment: KotlinFragment)
 
 }

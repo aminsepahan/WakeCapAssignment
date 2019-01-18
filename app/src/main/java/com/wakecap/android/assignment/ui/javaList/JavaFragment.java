@@ -20,7 +20,6 @@ import com.github.florent37.viewanimator.ViewAnimator;
 import com.wakecap.android.assignment.R;
 import com.wakecap.android.assignment.models.BaseItem;
 import com.wakecap.android.assignment.models.WorkerAttributes;
-import com.wakecap.android.assignment.utils.ItemDecorationPadding;
 import org.jetbrains.annotations.NotNull;
 
 import java.util.List;
@@ -50,7 +49,7 @@ public class JavaFragment extends Fragment implements JavaContract.View {
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        rootView = inflater.inflate(R.layout.fragment_java, container, false);
+        rootView = inflater.inflate(R.layout.fragment_list, container, false);
         progressBar = rootView.findViewById(R.id.progress);
         recyclerView = rootView.findViewById(R.id.rv);
         recyclerView.setHasFixedSize(true);
@@ -84,7 +83,7 @@ public class JavaFragment extends Fragment implements JavaContract.View {
         if (showHide) {
             ViewAnimator.animate(progressBar)
                     .fadeIn()
-                    .duration(200)
+                    .duration(400)
                     .onStart(new AnimationListener.Start() {
                         @Override
                         public void onStart() {
@@ -94,7 +93,7 @@ public class JavaFragment extends Fragment implements JavaContract.View {
         } else {
             ViewAnimator.animate(progressBar)
                     .fadeOut()
-                    .duration(200)
+                    .duration(400)
                     .onStop(new AnimationListener.Stop() {
                         @Override
                         public void onStop() {
@@ -108,9 +107,9 @@ public class JavaFragment extends Fragment implements JavaContract.View {
     public void workersListDataReady(@NotNull List<BaseItem<WorkerAttributes>> items) {
 
         JavaListAdapter adapter = new JavaListAdapter(items);
-        recyclerView.addItemDecoration(new ItemDecorationPadding(10));
+//        recyclerView.addItemDecoration(new ItemDecorationPadding(10));
         recyclerView.setAdapter(adapter);
-        ViewAnimator.animate(recyclerView).slideBottomIn().duration(300).start();
+        ViewAnimator.animate(recyclerView).slideBottomIn().duration(400).start();
 
     }
 

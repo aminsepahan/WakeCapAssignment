@@ -10,9 +10,14 @@
               tools:layout="@layout/fragment_home">
         <action android:id="@+id/action_homeFragment_to_javaFragment"
                 app:destination="@id/javaFragment"/>
+        <action android:id="@+id/action_homeFragment_to_kotlinFragment" app:destination="@id/kotlinFragment"/>
     </fragment>
     <fragment android:id="@+id/javaFragment"
               android:name="com.wakecap.android.assignment.ui.javaList.JavaFragment"
               android:label="fragment_java"
-              tools:layout="@layout/fragment_java"/>
+              tools:layout="@layout/fragment_list"/>
+    <fragment android:id="@+id/kotlinFragment"
+              android:name="com.wakecap.android.assignment.ui.kotlinList.KotlinFragment"
+              tools:layout="@layout/fragment_list"
+              android:label="KotlinFragment"/>
 </navigation>
