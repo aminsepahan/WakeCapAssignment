@@ -1,8 +1,9 @@
 package com.wakecap.android.assignment.ui.main
 
 import android.os.Bundle
-import android.support.v4.app.Fragment
-import android.support.v7.app.AppCompatActivity
+import androidx.fragment.app.Fragment
+import androidx.appcompat.app.AppCompatActivity
+import androidx.navigation.fragment.NavHostFragment
 import com.wakecap.android.assignment.R
 import com.wakecap.android.assignment.di.component.DaggerActivityComponent
 import com.wakecap.android.assignment.di.module.ActivityModule
@@ -11,7 +12,7 @@ import com.wakecap.android.assignment.ui.home.HomeFragment
 import com.wakecap.android.assignment.ui.workersList.JavaFragment
 import javax.inject.Inject
 
-class MainActivity : AppCompatActivity(), MainContract.View, BaseContract.HomeFragmentOnCLickListener {
+class MainActivity : AppCompatActivity(), MainContract.View {
 
 
     @Inject
@@ -21,26 +22,9 @@ class MainActivity : AppCompatActivity(), MainContract.View, BaseContract.HomeFr
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         injectDependency()
-
         presenter.attach(this)
     }
 
-
-    override fun showHomeFragment() {
-        replaceFragment(HomeFragment.newInstance())
-    }
-
-    override fun showJavaListFragment() {
-        replaceFragment(JavaFragment.newInstance())
-    }
-
-    override fun showKotlinFragment() {
-
-    }
-
-    override fun onBackPressed() {
-        super.onBackPressed()
-    }
 
     @Suppress("DEPRECATION")
     private fun injectDependency() {
@@ -51,14 +35,4 @@ class MainActivity : AppCompatActivity(), MainContract.View, BaseContract.HomeFr
         activityComponent.inject(this)
     }
 
-    override fun onClicked(javaOrKotlin: Boolean) {
-
-    }
-
-    private fun replaceFragment(fragment: Fragment ) {
-        supportFragmentManager.beginTransaction()
-            .disallowAddToBackStack()
-            .replace(R.id.frame, fragment)
-            .commit()
-    }
 }

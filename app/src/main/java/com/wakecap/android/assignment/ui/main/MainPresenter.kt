@@ -10,14 +10,6 @@ class MainPresenter: MainContract.Presenter {
     private lateinit var view: MainContract.View
 
 
-    override fun onJavaCardClicked() {
-        view.showJavaListFragment()
-    }
-
-    override fun onKotlinCardClicked() {
-        view.showKotlinFragment()
-    }
-
     override fun subscribe() {
 
     }
@@ -28,7 +20,7 @@ class MainPresenter: MainContract.Presenter {
 
     override fun attach(view: MainContract.View) {
         this.view = view
-        view.showHomeFragment() // as default
+
     }
 
 }

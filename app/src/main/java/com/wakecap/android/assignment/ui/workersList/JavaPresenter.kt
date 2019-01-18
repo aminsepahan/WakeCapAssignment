@@ -12,7 +12,6 @@ import io.reactivex.schedulers.Schedulers
 
 class JavaPresenter : JavaContract.Presenter {
 
-    private val subscriptions = CompositeDisposable()
     private val api: WebServices = WebServices.create()
     private lateinit var view: JavaContract.View
 
@@ -21,7 +20,6 @@ class JavaPresenter : JavaContract.Presenter {
     }
 
     override fun unsubscribe() {
-        subscriptions.clear()
     }
 
     override fun attach(view: JavaContract.View) {
@@ -40,7 +38,7 @@ class JavaPresenter : JavaContract.Presenter {
         //endregion
 
         //region Retrofit and Rxjava logic
-        val subscribe = api.getWorkersList().subscribeOn(Schedulers.io())
+        WebServices.create().getWorkersList().subscribeOn(Schedulers.io())
             .observeOn(Schedulers.io())
             .subscribe({ model: BaseResponseModel<WorkerAttributes>? ->
                 view.showLoading(false)
@@ -51,7 +49,6 @@ class JavaPresenter : JavaContract.Presenter {
                 view.showLoading(false)
                 view.dataError(error.localizedMessage)
             })
-        subscriptions.add(subscribe)
         //endregion
 
         //region Volley request which is commented and is not being used

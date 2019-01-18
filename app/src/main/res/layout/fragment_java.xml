@@ -5,7 +5,7 @@
              android:padding="@dimen/activity_default_padding"
              tools:context="com.wakecap.android.assignment.ui.workersList.JavaFragment">
 
-    <android.support.v7.widget.RecyclerView
+    <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/rv"
             android:layout_width="match_parent"
             android:layout_height="match_parent"

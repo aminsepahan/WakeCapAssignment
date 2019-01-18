@@ -3,23 +3,20 @@ package com.wakecap.android.assignment.ui.home
 import android.content.Context
 import android.net.ConnectivityManager
 import android.os.Bundle
-import android.support.annotation.StringRes
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.annotation.StringRes
+import androidx.fragment.app.Fragment
+import androidx.navigation.fragment.findNavController
 import com.wakecap.android.assignment.R
 import com.wakecap.android.assignment.di.component.DaggerFragmentComponent
 import com.wakecap.android.assignment.di.module.FragmentModule
-import com.wakecap.android.assignment.models.BaseItem
-import com.wakecap.android.assignment.models.WorkerAttributes
-import com.wakecap.android.assignment.ui.base.BaseContract
-import com.wakecap.android.assignment.ui.main.MainContract
-import com.wakecap.android.assignment.utils.BaseFragment
 import kotlinx.android.synthetic.main.fragment_home.*
 import javax.inject.Inject
 
 
-class HomeFragment : BaseFragment(), HomeContract.View {
+class HomeFragment : Fragment(), HomeContract.View {
 
     @Inject
     lateinit var presenter: HomeContract.Presenter
@@ -47,25 +44,7 @@ class HomeFragment : BaseFragment(), HomeContract.View {
         kotlinCard.setOnClickListener { presenter.onKotlinCardClicked() }
     }
 
-    override fun showLoading(position: Int, showHide: Boolean) {
-
-    }
-
-    override fun workersListDataReady(position: Int, items: List<BaseItem<WorkerAttributes>>) {
-
-    }
-
-    override fun dataError(error: String) {
-
-    }
-
-    override fun onAttach(context: Context) {
-        super.onAttach(context)
-        if (context is BaseContract.HomeFragmentOnCLickListener)
-            listener = context as MainContract.View
-    }
-
-    override fun getStringFromRes(@StringRes int: Int) : String{
+    override fun getStringFromRes(@StringRes int: Int): String {
         return getString(int)
     }
 
@@ -86,7 +65,7 @@ class HomeFragment : BaseFragment(), HomeContract.View {
 
 
     override fun openJavaFragment() {
-        listener?.showJavaListFragment()
+        findNavController().navigate(R.id.javaFragment)
     }
 
     override fun openKotlinFragment() {
@@ -94,20 +73,5 @@ class HomeFragment : BaseFragment(), HomeContract.View {
     }
 
 
-    @Suppress("DEPRECATION")
-    override fun isOnline(): Boolean {
-        val cm = context?.getSystemService(Context.CONNECTIVITY_SERVICE) as ConnectivityManager
-        val netInfo = cm.activeNetworkInfo
-        return netInfo != null && netInfo.isConnectedOrConnecting
-    }
 
-    override fun onDetach() {
-        super.onDetach()
-        listener = null
-    }
-
-    companion object {
-        @JvmStatic
-        fun newInstance() = HomeFragment()
-    }
 }

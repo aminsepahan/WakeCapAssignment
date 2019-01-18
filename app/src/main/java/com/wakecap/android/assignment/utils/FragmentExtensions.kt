@@ -3,8 +3,8 @@ package com.wakecap.android.assignment.utils
 import android.animation.Animator
 import android.animation.AnimatorListenerAdapter
 import android.os.Build
-import android.support.design.widget.Snackbar
-import android.support.v4.app.Fragment
+import com.google.android.material.snackbar.Snackbar
+import androidx.fragment.app.Fragment
 import android.view.View
 import android.view.View.GONE
 import android.view.View.VISIBLE
@@ -14,15 +14,15 @@ import com.wakecap.android.assignment.R
  * Created by Amin on 08/06/2018.
  *
  */
-fun Fragment.snack(
+fun androidx.fragment.app.Fragment.snack(
     message: String, buttonTxt: Int = R.string.ok,
     action: View.OnClickListener? = null, indefinite: Boolean = false
 ) {
     if (activity != null) {
         val snackBar: Snackbar = if (indefinite) {
-            Snackbar.make(activity!!.window.decorView.rootView, message, Snackbar.LENGTH_INDEFINITE)
+            com.google.android.material.snackbar.Snackbar.make(activity!!.window.decorView.rootView, message, com.google.android.material.snackbar.Snackbar.LENGTH_INDEFINITE)
         } else {
-            Snackbar.make(activity!!.window.decorView.rootView, message, Snackbar.LENGTH_LONG)
+            com.google.android.material.snackbar.Snackbar.make(activity!!.window.decorView.rootView, message, com.google.android.material.snackbar.Snackbar.LENGTH_LONG)
         }
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
             snackBar.setAction(buttonTxt, action)

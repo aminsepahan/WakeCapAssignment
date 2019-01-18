@@ -6,15 +6,10 @@ class MainContract {
 
     interface View {
 
-        fun showHomeFragment()
-        fun showJavaListFragment()
-        fun showKotlinFragment()
-        fun onBackPressed()
     }
 
     interface Presenter : BaseContract.Presenter<MainContract.View> {
-        fun onJavaCardClicked()
-        fun onKotlinCardClicked()
+
     }
 
 }

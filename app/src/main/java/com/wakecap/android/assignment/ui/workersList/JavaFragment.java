@@ -1,23 +1,27 @@
 package com.wakecap.android.assignment.ui.workersList;
 
 
+import android.content.Context;
+import android.net.ConnectivityManager;
+import android.net.NetworkInfo;
 import android.os.Bundle;
-import android.support.annotation.NonNull;
-import android.support.annotation.StringRes;
-import android.support.v4.app.Fragment;
-import android.support.v7.widget.LinearLayoutManager;
-import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
+import androidx.annotation.StringRes;
+import androidx.fragment.app.Fragment;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 import com.github.florent37.viewanimator.ViewAnimator;
 import com.wakecap.android.assignment.R;
 import com.wakecap.android.assignment.models.BaseItem;
 import com.wakecap.android.assignment.models.WorkerAttributes;
 import org.jetbrains.annotations.NotNull;
 
-import javax.inject.Inject;
 import java.util.List;
+import java.util.Objects;
 
 /**
  *
@@ -25,20 +29,14 @@ import java.util.List;
 public class JavaFragment extends Fragment implements JavaContract.View {
 
 
-    @Inject
-    JavaPresenter presenter;
-    View rootView;
-    private JavaListAdapter adapter;
-    RecyclerView recyclerView;
+    private JavaPresenter presenter;
+    private View rootView;
+    private RecyclerView recyclerView;
 
     public JavaFragment() {
         // Required empty public constructor
     }
 
-
-    public static JavaFragment newInstance() {
-        return new JavaFragment();
-    }
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -53,7 +51,14 @@ public class JavaFragment extends Fragment implements JavaContract.View {
         recyclerView.setHasFixedSize(true);
         LinearLayoutManager layoutManager = new LinearLayoutManager(getActivity());
         recyclerView.setLayoutManager(layoutManager);
+        presenter = new JavaPresenter();
+        presenter.attach(this);
         return rootView;
+    }
+
+    @Override
+    public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
+        super.onViewCreated(view, savedInstanceState);
     }
 
     @Override
@@ -61,9 +66,12 @@ public class JavaFragment extends Fragment implements JavaContract.View {
         presenter.downloadDataFromApi();
     }
 
+
     @Override
     public boolean isOnline() {
-        return false;
+        ConnectivityManager cm = (ConnectivityManager) Objects.requireNonNull(getActivity()).getSystemService(Context.CONNECTIVITY_SERVICE);
+        NetworkInfo netInfo = cm.getActiveNetworkInfo();
+        return (netInfo != null && netInfo.isConnectedOrConnecting());
     }
 
     @Override
@@ -74,7 +82,7 @@ public class JavaFragment extends Fragment implements JavaContract.View {
     @Override
     public void workersListDataReady(@NotNull List<BaseItem<WorkerAttributes>> items) {
 
-        adapter = new JavaListAdapter(items);
+        JavaListAdapter adapter = new JavaListAdapter(items);
 
         recyclerView.setAdapter(adapter);
 
