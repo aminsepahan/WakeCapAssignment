@@ -14,7 +14,6 @@ class ItemDecorationPadding(private val paddingTop: Int, private val column: Int
     override fun getItemOffsets(outRect: Rect, view: View, parent: RecyclerView, state: RecyclerView.State) {
         super.getItemOffsets(outRect, view, parent, state)
 
-        val itemCount = state.itemCount
 
         val itemPosition = parent.getChildAdapterPosition(view)
 
