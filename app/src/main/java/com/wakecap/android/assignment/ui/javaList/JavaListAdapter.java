@@ -1,4 +1,4 @@
-package com.wakecap.android.assignment.ui.workersList;
+package com.wakecap.android.assignment.ui.javaList;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
@@ -22,7 +22,7 @@ public class JavaListAdapter extends RecyclerView.Adapter<JavaListAdapter.GroupV
 
     private List<BaseItem<WorkerAttributes>> modelList;
 
-    public JavaListAdapter(List<BaseItem<WorkerAttributes>> modelList) {
+    JavaListAdapter(List<BaseItem<WorkerAttributes>> modelList) {
         this.modelList = modelList;
     }
 
@@ -44,7 +44,11 @@ public class JavaListAdapter extends RecyclerView.Adapter<JavaListAdapter.GroupV
         final BaseItem<WorkerAttributes> model = modelList.get(position);
         holder.name.setText(model.getAttributes().getFullName());
         holder.role.setText(model.getAttributes().getRoleName());
-        holder.inventory.setText(model.getAttributes().getInventories().get(0).getAttributes().getName());
+        if (!model.getAttributes().getInventories().isEmpty()) {
+            holder.inventory.setText(model.getAttributes().getInventories().get(0).getAttributes().getName());
+        } else {
+            holder.inventory.setText("N/A");
+        }
     }
 
 

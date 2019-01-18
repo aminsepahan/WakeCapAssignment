@@ -1,4 +1,4 @@
-package com.wakecap.android.assignment.ui.workersList;
+package com.wakecap.android.assignment.ui.javaList;
 
 
 import android.content.Context;
@@ -8,16 +8,19 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ProgressBar;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.annotation.StringRes;
 import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
+import com.github.florent37.viewanimator.AnimationListener;
 import com.github.florent37.viewanimator.ViewAnimator;
 import com.wakecap.android.assignment.R;
 import com.wakecap.android.assignment.models.BaseItem;
 import com.wakecap.android.assignment.models.WorkerAttributes;
+import com.wakecap.android.assignment.utils.ItemDecorationPadding;
 import org.jetbrains.annotations.NotNull;
 
 import java.util.List;
@@ -32,6 +35,7 @@ public class JavaFragment extends Fragment implements JavaContract.View {
     private JavaPresenter presenter;
     private View rootView;
     private RecyclerView recyclerView;
+    private ProgressBar progressBar;
 
     public JavaFragment() {
         // Required empty public constructor
@@ -47,6 +51,7 @@ public class JavaFragment extends Fragment implements JavaContract.View {
     public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         rootView = inflater.inflate(R.layout.fragment_java, container, false);
+        progressBar = rootView.findViewById(R.id.progress);
         recyclerView = rootView.findViewById(R.id.rv);
         recyclerView.setHasFixedSize(true);
         LinearLayoutManager layoutManager = new LinearLayoutManager(getActivity());
@@ -76,17 +81,37 @@ public class JavaFragment extends Fragment implements JavaContract.View {
 
     @Override
     public void showLoading(boolean showHide) {
-
+        if (showHide) {
+            ViewAnimator.animate(progressBar)
+                    .fadeIn()
+                    .duration(200)
+                    .onStart(new AnimationListener.Start() {
+                        @Override
+                        public void onStart() {
+                            progressBar.setVisibility(View.VISIBLE);
+                        }
+                    }).start();
+        } else {
+            ViewAnimator.animate(progressBar)
+                    .fadeOut()
+                    .duration(200)
+                    .onStop(new AnimationListener.Stop() {
+                        @Override
+                        public void onStop() {
+                            progressBar.setVisibility(View.GONE);
+                        }
+                    }).start();
+        }
     }
 
     @Override
     public void workersListDataReady(@NotNull List<BaseItem<WorkerAttributes>> items) {
 
         JavaListAdapter adapter = new JavaListAdapter(items);
-
+        recyclerView.addItemDecoration(new ItemDecorationPadding(10));
         recyclerView.setAdapter(adapter);
-
         ViewAnimator.animate(recyclerView).slideBottomIn().duration(300).start();
+
     }
 
     @Override

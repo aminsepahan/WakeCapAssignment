@@ -1,6 +1,5 @@
-package com.wakecap.android.assignment.ui.workersList
+package com.wakecap.android.assignment.ui.javaList
 
-import androidx.annotation.StringRes
 import com.wakecap.android.assignment.models.BaseItem
 import com.wakecap.android.assignment.models.WorkerAttributes
 import com.wakecap.android.assignment.ui.base.BaseContract

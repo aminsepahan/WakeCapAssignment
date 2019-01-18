@@ -12,7 +12,7 @@
                 app:destination="@id/javaFragment"/>
     </fragment>
     <fragment android:id="@+id/javaFragment"
-              android:name="com.wakecap.android.assignment.ui.workersList.JavaFragment"
+              android:name="com.wakecap.android.assignment.ui.javaList.JavaFragment"
               android:label="fragment_java"
               tools:layout="@layout/fragment_java"/>
 </navigation>

@@ -1,13 +1,11 @@
-package com.wakecap.android.assignment.ui.workersList
+package com.wakecap.android.assignment.ui.javaList
 
+import android.annotation.SuppressLint
 import com.wakecap.android.assignment.R
 import com.wakecap.android.assignment.api.WebServices
-import com.wakecap.android.assignment.api.WebServicesVolley
 import com.wakecap.android.assignment.models.BaseResponseModel
 import com.wakecap.android.assignment.models.WorkerAttributes
-import com.wakecap.android.assignment.utils.Constants.BASE_URL
-import com.wakecap.android.assignment.utils.Constants.WORKERS_URL
-import io.reactivex.disposables.CompositeDisposable
+import io.reactivex.android.schedulers.AndroidSchedulers
 import io.reactivex.schedulers.Schedulers
 
 class JavaPresenter : JavaContract.Presenter {
@@ -27,6 +25,7 @@ class JavaPresenter : JavaContract.Presenter {
         view.initViews()
     }
 
+    @SuppressLint("CheckResult")
     override fun downloadDataFromApi(){
 
         //region checking if the device is online
@@ -35,11 +34,12 @@ class JavaPresenter : JavaContract.Presenter {
             view.dataError(view.getStringFromRes(R.string.you_are_offline))
             return
         }
+        view.showLoading(true)
         //endregion
 
         //region Retrofit and Rxjava logic
         WebServices.create().getWorkersList().subscribeOn(Schedulers.io())
-            .observeOn(Schedulers.io())
+            .observeOn(AndroidSchedulers.mainThread())
             .subscribe({ model: BaseResponseModel<WorkerAttributes>? ->
                 view.showLoading(false)
                 if (model != null && model.data.items.isNotEmpty()) {

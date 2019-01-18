@@ -23,10 +23,11 @@
                   tools:ignore="RtlSymmetry"/>
 
         <TextView android:layout_width="wrap_content"
-                  android:layout_height="wrap_content"
+                  android:layout_height="22dp"
                   android:id="@+id/workerName"
                   app:layout_constraintTop_toTopOf="@id/workerNameTitle"
                   android:layout_marginStart="5dp"
+                  android:textStyle="bold"
                   app:layout_constraintStart_toEndOf="@id/workerNameTitle"
                   tools:text="@tools:sample/full_names"
         />
@@ -42,10 +43,11 @@
                   tools:ignore="RtlSymmetry"/>
 
         <TextView android:layout_width="wrap_content"
-                  android:layout_height="wrap_content"
+                  android:layout_height="16dp"
                   android:id="@+id/workerRole"
                   app:layout_constraintTop_toTopOf="@id/workerRoleTitle"
                   android:layout_marginStart="5dp"
+                  android:textStyle="bold"
                   app:layout_constraintStart_toEndOf="@id/workerRoleTitle"
                   tools:text="@tools:sample/full_names"
         />
@@ -65,6 +67,7 @@
                   android:id="@+id/workerInventory"
                   app:layout_constraintTop_toTopOf="@id/workerInventoryTitle"
                   android:layout_marginStart="5dp"
+                  android:textStyle="bold"
                   app:layout_constraintStart_toEndOf="@id/workerInventoryTitle"
                   tools:text="@tools:sample/cities"
         />
